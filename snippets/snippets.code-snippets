@@ -1,0 +1,80 @@
+{
+    "AOI.JS Snippets Starter Template": {
+        "prefix": "!main",
+        "body": [
+            "// Attention! You need installed AOI.JS!",
+            "const aoijs = require('aoi.js')",
+            "",
+            "const bot = new aoijs.Bot({",
+            "   token: \"TOKEN\", //Discord Bot Token",
+            "   prefix: \"PREFIX\" //Discord Bot Prefix",
+            "})",
+            "",
+            "bot.onMessage()",
+            "",
+            "bot.command({",
+            "   name: \"ping\", //Trigger name (command name)",
+            "   code: `Pong! $pingms` //Code",
+            "})",
+            "",
+            "bot.readyCommand({",
+            "    channel: \"\", //You can use this or not",
+            "    code: `$log[Ready on $userTag[$clientID]]` //Example Ready on Client",
+            "})"
+        ],
+        "description": "A starter template"
+    },
+    "AOI.JS Basic Command Template": {
+        "prefix": "!cmd",
+        "body": [
+            "bot.onMessage()",
+            "",
+            "bot.command({",
+            "   name: \"ping\", //Trigger name (command name)",
+            "   code: `Pong! $pingms` //Code",
+            "})",
+        ],
+        "description": "A basic command template"
+    },
+    "AOI.js Slash Command Template": {
+        "prefix": "!slash-command",
+        "body": [
+            "bot.interactionCommand({",
+            "    name: \"Interaction name\"",
+            "    code: `Code here`",
+            "})"
+        ],
+        "description": "Slash Command Template"
+    },
+    "AOI.JS Button Template": {
+        "prefix": "!button",
+        "body": [
+            "bot.interactionCommand({",
+                "name: \"Interaction name\"",
+                "prototype: \"button\"",
+                "code: `Code here`",
+                "})"
+        ],
+        "description": "Button Template"
+    },
+    "AOI.JS Ban Log": {
+        "prefix": "!banlog",
+        "body": [
+            "bot.banAddCommand({ //command",
+            "    channel: \"channel id\", //channel where it'll be logged",
+            "    code: `your code` // your code",
+            "})"    
+        ],
+        "description": "Logs For Ban"
+    },
+    "AOI.JS Ban Remove Log": {
+        "prefix": "!brl",
+        "body": [
+            "bot.banRemoveCommand({ //command",
+            "    channel: \"channel id\", //channel where bot logs",
+            "    code: `your code` //your code",
+            "})"   
+        ],
+        "description": "Logs For Ban Remove"
+    }
+}
